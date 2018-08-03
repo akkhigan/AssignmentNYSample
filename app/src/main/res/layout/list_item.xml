@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id ="@+id/layout1"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/list_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/list_title"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:text="Artile Name "
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_title"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:textColor="#000000"
+            android:ellipsize="end"
+            android:text="Popular articles description"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_marginRight="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/arrow_down_float"
+            android:id="@+id/imgarrow"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:text="Author name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:text="Date"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout1"
+        android:layout_marginTop="20dp"
+        android:background="#aeb6bf" />
+</RelativeLayout>
