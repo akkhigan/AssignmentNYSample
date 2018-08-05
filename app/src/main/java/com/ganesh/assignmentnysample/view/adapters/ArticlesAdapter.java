@@ -19,12 +19,15 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ViewHo
     private Context context;
     private ItemClickListener clickListener;
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tv1,tv2;
+        TextView title,desc,byLine,date;
         ImageView imageView;
+
         public ViewHolder(View itemView) {
             super(itemView);
-            tv1 = (TextView) itemView.findViewById(R.id.list_title);
-            tv2 = (TextView) itemView.findViewById(R.id.list_desc);
+            title = (TextView) itemView.findViewById(R.id.title);
+            desc = (TextView) itemView.findViewById(R.id.desc);
+            byLine = (TextView) itemView.findViewById(R.id.txtByLine);
+            date = (TextView) itemView.findViewById(R.id.txtDate);
             imageView = (ImageView)itemView.findViewById(R.id.list_avatar);
         }
     }
@@ -43,16 +46,19 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ViewHo
     }
     @Override
     public void onBindViewHolder(ArticlesAdapter.ViewHolder holder, final int position){
-//        holder.tv1.setText(itemList.get(position).getName());
-//        holder.tv2.setText(itemList.get(position).getDesc());
-//        holder.imageView.setImageResource(itemList.get(position).getPhoto());
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (clickListener != null) clickListener.itemClick(v, position);
-            }
-        });
-        holder.imageView.setTag(holder);
+        holder.title.setText(itemList.get(position).getTitle());
+        holder.desc.setText(itemList.get(position).getSection());
+        holder.byLine.setText(itemList.get(position).getByline());
+        holder.date.setText(itemList.get(position).getPublished_date());
+
+        //holder.imageView.setImageResource(itemList.get(position).getUrl());
+//        holder.imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (clickListener != null) clickListener.itemClick(v, position);
+//            }
+//        });
+//        holder.imageView.setTag(holder);
     }
     public void setClickListener(ItemClickListener itemClickListener) {
         this.clickListener = itemClickListener;
