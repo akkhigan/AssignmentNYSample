@@ -1,6 +1,6 @@
 package com.ganesh.assignmentnysample.view;
 
-import com.ganesh.assignmentnysample.model.PopularArticles;
+import com.ganesh.assignmentnysample.model.Result;
 
 import java.util.List;
 
@@ -11,6 +11,6 @@ import java.util.List;
  */
 public interface PopularArticlesView {
 
-    void popularArticlesList(List<PopularArticles> articles);
+    void popularArticlesList(List<Result> articles);
 
 }

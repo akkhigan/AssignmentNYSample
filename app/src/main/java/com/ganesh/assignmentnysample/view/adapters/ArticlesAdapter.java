@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ganesh.assignmentnysample.R;
-import com.ganesh.assignmentnysample.model.PopularArticles;
+import com.ganesh.assignmentnysample.model.Result;
 
 import java.util.List;
 
 public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ViewHolder> {
-    private List<PopularArticles> itemList;
+    private List<Result> itemList;
     private Context context;
     private ItemClickListener clickListener;
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -29,7 +29,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ViewHo
         }
     }
 
-    public ArticlesAdapter(Context context, List<PopularArticles> itemList) {
+    public ArticlesAdapter(Context context, List<Result> itemList) {
 
         this.itemList = itemList;
         this.context = context;

@@ -2,7 +2,7 @@ package com.ganesh.assignmentnysample.presenter;
 
 
 import com.ganesh.assignmentnysample.model.Data;
-import com.ganesh.assignmentnysample.model.PopularArticles;
+import com.ganesh.assignmentnysample.model.Result;
 import com.ganesh.assignmentnysample.service.PopularArticlesService;
 import com.ganesh.assignmentnysample.view.PopularArticlesView;
 
@@ -39,7 +39,7 @@ public class PopularArticlesPresenter {
                         Data data = response.body();
 
                         if (data != null && data.getAPIResponse() != null) {
-                            List<PopularArticles> result = data.getAPIResponse().getResult();
+                            List<Result> result = data.getAPIResponse().getResult();
                             articlesView.popularArticlesList(result);
                         }
                     }
