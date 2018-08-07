@@ -38,8 +38,8 @@ public class PopularArticlesPresenter {
                     public void onResponse(Call<Data> call, Response<Data> response) {
                         Data data = response.body();
 
-                        if (data != null && data.getAPIResponse() != null) {
-                            List<Result> result = data.getAPIResponse().getResult();
+                        if (data != null && data.getResult() != null) {
+                            List<Result> result = data.getResult();
                             articlesView.popularArticlesList(result);
                         }
                     }
