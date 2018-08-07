@@ -38,9 +38,17 @@ public class PopularArticlesAPITest extends InstrumentationTestCase {
                 .build();
     }
 
-
     @SmallTest
     public void testRandomResults() throws Exception {
+        BehaviorDelegate<PopularArticlesAPI> delegate = mockRetrofit.create(PopularArticlesAPI.class);
+        PopularArticlesAPI mockPopularArticlesService = new MockPopularArticlesAPIService(delegate);
+
+        //Actual Test
+        Call<Data> result = mockPopularArticlesService.getResults();
+        Response<Data> response = result.execute();
+
+        //Asserting response
+        Assert.assertTrue(response.isSuccessful());
 
     }
 
